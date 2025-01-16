@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PredictController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,18 +26,10 @@ Route::get('/akun-perawat', function () {
     return view('pages.AkunPerawat');
 });
 
-Route::get('/data-latih', function () {
-    return view('pages.DataLatih');
+Route::get('/prediksi-penyakit', function () {
+    return view('pages.PrediksiPenyakit
+    ');
 });
 
-Route::get('/data-soal', function () {
-    return view('pages.DataSoal');
-});
 
-Route::get('/uji-akurasi', function () {
-    return view('pages.UjiAkurasi');
-});
-
-Route::get('/hasil-klasifikasi', function () {
-    return view('pages.HasilKlasifikasi');
-});
+Route::get('/prediksi-penyakits', [PredictController::class, 'classify'])->name('classify');

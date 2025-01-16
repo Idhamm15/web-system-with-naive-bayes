@@ -9,10 +9,11 @@
     <ul>
         <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
         <li><a href="{{ url('/akun-perawat') }}">Data Perawat</a></li>
-        <li><a href="{{ url('/data-latih') }}">Data Latih</a></li>
+        {{-- <li><a href="{{ url('/data-latih') }}">Data Latih</a></li>
         <li><a href="{{ url('/data-soal') }}">Data Soal</a></li>
         <li><a href="{{ url('/uji-akurasi') }}">Uji Akurasi</a></li>
-        <li><a href="{{ url('/hasil-klasifikasi') }}">Hasil Klasifikasi</a></li>
+        <li><a href="{{ url('/hasil-klasifikasi') }}">Hasil Klasifikasi</a></li> --}}
+        <li><a href="{{ url('/prediksi penyakit') }}">Prediksi Penyakit</a></li>
         <li><a href="{{ url('/logout') }}">Keluar</a></li>
 
         {{-- <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
