@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PredictController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,19 +18,32 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Auth::routes();
 
 Route::get('/', function () {
     return view('pages.Beranda');
 });
 
-Route::get('/akun-perawat', function () {
-    return view('pages.AkunPerawat');
+Route::get('/dataset', function () {
+    return view('pages.Dataset');
 });
 
-Route::get('/prediksi-penyakit', function () {
-    return view('pages.PrediksiPenyakit
-    ');
+Route::get('/skrining-penyakit', function () {
+    return view('pages.SkriningPenyakitDataDiri');
 });
 
+Route::get('/soal-skrining-penyakit', function () {
+    return view('pages.SkriningPenyakit');
+});
 
-Route::get('/prediksi-penyakits', [PredictController::class, 'classify'])->name('classify');
+Route::get('/hasil-skrining-penyakit', function () {
+    return view('pages.HasilSkriningPenyakit');
+});
+
+// Route::get('/prediksi-penyakit', function () {
+//     return view('pages.PrediksiPenyakit
+//     ');
+// });
+
+
+Route::get('/prediksi-penyakit', [PredictController::class, 'classify'])->name('classify');

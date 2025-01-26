@@ -71,10 +71,13 @@ class PredictController extends Controller
             $classLikelihoods[$class] = 1; // Start with 1 (multiplication identity)
 
             // Loop untuk menghitung likelihood
-            foreach ($dataTesting as $attribute => $value) {
+            foreach ($dataTesting->toArray() as $attribute => $value) {
                 if (isset($attributeProbabilities[$attribute][$value][$class])) {
-                    // Kalikan dengan probabilitas yang sesuai
+                    // Kalikan dengan probabilitas atribut yang sesuai
                     $classLikelihoods[$class] *= $attributeProbabilities[$attribute][$value][$class];
+                } else {
+                    // Jika atribut tidak ditemukan, anggap probabilitasnya tidak berkontribusi
+                    $classLikelihoods[$class] *= 1;
                 }
             }
         }

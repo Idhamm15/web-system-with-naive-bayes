@@ -3,5 +3,5 @@
 @section('title', 'Beranda')
 
 @section('content')
-    @include('component.content.test')
+    @include('component.content.main_content')
 @endsection

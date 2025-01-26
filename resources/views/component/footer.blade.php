@@ -4,7 +4,7 @@
     <div class="row gy-4">
     <div class="col-lg-4 col-md-6 footer-about">
         <a href="index.html" class="logo d-flex align-items-center">
-        <span class="sitename">Company</span>
+        <span class="sitename">Klasifikasi Naive Bayes</span>
         </a>
         <div class="footer-contact pt-3">
         <p>A108 Adam Street</p>
@@ -21,29 +21,25 @@
     </div>
 
     <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Useful Links</h4>
+        <h4>Halaman</h4>
         <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Terms of service</a></li>
-        <li><a href="#">Privacy policy</a></li>
+        <li><a href="{{ url('/') }}">Beranda</a></li>
+        <li><a href="{{ url('/data-perawat') }}">Data Perawat</a></li>
+        <li><a href="{{ url('/skrining-penyakit') }}">Skrining Penyakit</a></li>
+        <li><a href="{{ url('/prediksi-penyakit') }}">Prediksi Penyakit</a></li>
         </ul>
     </div>
 
     <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Our Services</h4>
+        <h4>Layanan</h4>
         <ul>
-        <li><a href="#">Web Design</a></li>
-        <li><a href="#">Web Development</a></li>
-        <li><a href="#">Product Management</a></li>
-        <li><a href="#">Marketing</a></li>
-        <li><a href="#">Graphic Design</a></li>
+            <li><a href="{{ url('/skrining-penyakit') }}">Skrining Penyakit</a></li>
+            <li><a href="{{ url('/prediksi-penyakit') }}">Prediksi Penyakit</a></li>
         </ul>
     </div>
 
     <div class="col-lg-4 col-md-12 footer-newsletter">
-        <h4>Our Newsletter</h4>
+        <h4>Berita Terbaru</h4>
         <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
         <form action="forms/newsletter.php" method="post" class="php-email-form">
         <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
@@ -57,7 +53,7 @@
 </div>
 
 <div class="container copyright text-center mt-4">
-    <p>© <span>Copyright</span> <strong class="px-1 sitename">Company</strong> <span>All Rights Reserved</span></p>
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Klasifikasi Naive Bayes</strong> <span>All Rights Reserved</span></p>
     <div class="credits">
     <!-- All the links in the footer should remain intact. -->
     <!-- You can delete the links only if you've purchased the pro version. -->

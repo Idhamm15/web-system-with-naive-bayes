@@ -12,25 +12,33 @@
             Keluhan Pasien di UPT Puskesmas
             Delitua
         </p>
-        <a href="{{ url('/') }}" class="btn-get-started">Uji Akurasi</a>
+        <a href="{{ url('/skrining-penyakit') }}" class="btn-get-started">Skrining Penyakit</a>
     </div>
     </div><!-- End Carousel Item -->
 
     <div class="carousel-item">
     <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
     <div class="container">
-        <h2>At vero eos et accusamus</h2>
-        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
-        <a href="about.html" class="btn-get-started">Read More</a>
+        <h2>Klasifikasi Naive Bayes</h2>
+        <p>
+            Implementasi Algoritma Naive Bayes Dalam Memprediksi Penyakit Berdasarkan
+            Keluhan Pasien di UPT Puskesmas
+            Delitua
+        </p>
+        <a href="{{ url('/skrining-penyakit') }}" class="btn-get-started">Skrining Penyakit</a>
     </div>
     </div><!-- End Carousel Item -->
 
     <div class="carousel-item">
     <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
     <div class="container">
-        <h2>Temporibus autem quibusdam</h2>
-        <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-        <a href="about.html" class="btn-get-started">Read More</a>
+        <h2>Klasifikasi Naive Bayes</h2>
+        <p>
+            Implementasi Algoritma Naive Bayes Dalam Memprediksi Penyakit Berdasarkan
+            Keluhan Pasien di UPT Puskesmas
+            Delitua
+        </p>
+        <a href="{{ url('/skrining-penyakit') }}" class="btn-get-started">Skrining Penyakit</a>
     </div>
     </div><!-- End Carousel Item -->
 
