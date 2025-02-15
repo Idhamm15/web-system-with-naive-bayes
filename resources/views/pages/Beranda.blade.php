@@ -4,4 +4,4 @@
 
 @section('content')
     @include('component.content.main_content')
-@endsection
+@endsection  
