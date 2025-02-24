@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DatasetController;
+use App\Http\Controllers\DiseaseScreeningController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PredictController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -18,32 +21,17 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
 Auth::routes();
 
-Route::get('/', function () {
-    return view('pages.Beranda');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::prefix('dataset')->name('dataset.')->group(function () {
+    Route::get('/', [DatasetController::class, 'index'])->name('index');
+    Route::post('/add', [DatasetController::class, 'add'])->name('add');
 });
-
-Route::get('/dataset', function () {
-    return view('pages.Dataset');
+Route::prefix('skrining-penyakit')->name('disesase_screening.')->group(function () {
+    Route::get('/', [DiseaseScreeningController::class, 'index'])->name('index');
+    Route::post('/', [DiseaseScreeningController::class, 'screening'])->name('screening');
 });
-
-Route::get('/skrining-penyakit', function () {
-    return view('pages.SkriningPenyakitDataDiri');
-});
-
-Route::get('/soal-skrining-penyakit', function () {
-    return view('pages.SkriningPenyakit');
-});
-
-Route::get('/hasil-skrining-penyakit', function () {
-    return view('pages.HasilSkriningPenyakit');
-});
-
-// Route::get('/prediksi-penyakit', function () {
-//     return view('pages.PrediksiPenyakit
-//     ');
-// });
-
-
 Route::get('/prediksi-penyakit', [PredictController::class, 'classify'])->name('classify');
+

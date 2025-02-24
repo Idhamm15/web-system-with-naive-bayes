@@ -2,15 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DataTraining;
 use Illuminate\Http\Request;
 
-class PredictController extends Controller
+class DiseaseScreeningController extends Controller
 {
-    public function classify(Request $request)
+    public function index ()
     {
+        return view('pages.SkriningPenyakit');
+    }
+
+    public function screening (Request $request)
+    {
+        // dd($request->all());
         // $dataTesting = $request->all();
-        $dataTesting = DataTraining::latest()->first();
+        $dataTesting = $request->all();
+        $name_patient = $request->fullname;
 
         // Probabilitas awal P(Ci)
         $classProbabilities = [
@@ -71,7 +77,7 @@ class PredictController extends Controller
             $classLikelihoods[$class] = 1; // Start with 1 (multiplication identity)
 
             // Loop untuk menghitung likelihood
-            foreach ($dataTesting->toArray() as $attribute => $value) {
+            foreach ($dataTesting as $attribute => $value) {
                 if (isset($attributeProbabilities[$attribute][$value][$class])) {
                     // Kalikan dengan probabilitas atribut yang sesuai
                     $classLikelihoods[$class] *= $attributeProbabilities[$attribute][$value][$class];
@@ -91,18 +97,6 @@ class PredictController extends Controller
         // Menentukan kelas prediksi
         $predictedClass = array_keys($finalProbabilities, max($finalProbabilities))[0];
 
-
-        return view('pages.PrediksiPenyakit', get_defined_vars());
+        return view('pages.HasilSkriningPenyakit', get_defined_vars());
     }
-
 }
-
-
-        // Mengirim hasil ke view
-        // return view('pages.PrediksiPenyakit', [
-        //     'classProbabilities' => $classProbabilities,
-        //     'attributeProbabilities' => $attributeProbabilities,
-        //     'classLikelihoods' => $classLikelihoods,
-        //     'finalProbabilities' => $finalProbabilities,
-        //     'predictedClass' => $predictedClass,
-        // ]);

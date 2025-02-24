@@ -8,19 +8,19 @@
             <h2>Hasil Skrining Penyakit</h2>
             <hr>
             <p>
-                Berdasarkan hasil skrining yang telah di isi sebelumnya, anda atas nama Budi mendapatkan <br> hasil prediksi penyakit : Ispa
+                Berdasarkan hasil skrining yang telah di isi sebelumnya, anda atas nama {{ $name_patient }} mendapatkan <br> hasil prediksi penyakit : {{ $predictedClass }}
             </p>
             <div class="button-container">
-                <button type="reset" class="btn btn-secondary">Kembali</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <a href="{{ url('/skrining-penyakit') }}" type="reset" class="btn btn-secondary">Kembali</a>
+                {{-- <button type="submit" class="btn btn-primary">Simpan</button> --}}
             </div>
         </div>
-        <style>
+        {{-- <style>
             .button-container {
                 display: flex;
-                justify-content: space-between; /* Membuat tombol di kiri dan kanan */
+                justify-content: space-between;
             }
-        </style>
+        </style> --}}
     </section>
 
 

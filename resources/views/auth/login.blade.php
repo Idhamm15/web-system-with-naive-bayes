@@ -18,7 +18,7 @@
 				<input 
 					type="text" 
 					class="form-control @error('username') is-invalid @enderror" 
-					:class="{ 'is-invalid': this.email_unavailable }"
+					:class="{ 'is-invalid': this.username }"
 					placeholder="Username"
 					id="username" 
 					name="username" 

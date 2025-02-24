@@ -86,6 +86,18 @@ class DataTrainingSeeder extends Seeder
 
             ['usia'=> 'A', 'jenis_kelamin'=> 'B', 'tussis'=> 'A', 'febris'=> 'A', 'selesma'=> 'A', 'gastreonteritis'=> 'B', 'colic_abdomen'=> 'B', 'polyuria'=> 'B', 'polydipsia'=> 'B', 'weakness'=> 'A', 'keterangan'=> 'ISPA'],
         
+            // YA = A
+            // Tidak = B
+
+            // dibawah 40 tahun = A
+            // 41-50 = B
+            // 
+
+            // data latih pindah ke dataset
+
+            // prediksinya lewat jalur soal
+
+            // pertama buka / maka pindahin ke /login   
 
 
 

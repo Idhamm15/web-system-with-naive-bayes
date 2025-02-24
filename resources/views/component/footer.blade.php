@@ -2,7 +2,7 @@
 
 <div class="container footer-top">
     <div class="row gy-4">
-    <div class="col-lg-4 col-md-6 footer-about">
+    {{-- <div class="col-lg-4 col-md-6 footer-about">
         <a href="index.html" class="logo d-flex align-items-center">
         <span class="sitename">Klasifikasi Naive Bayes</span>
         </a>
@@ -18,7 +18,7 @@
         <a href=""><i class="bi bi-instagram"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
         </div>
-    </div>
+    </div> --}}
 
     <div class="col-lg-2 col-md-3 footer-links">
         <h4>Halaman</h4>
@@ -36,17 +36,6 @@
             <li><a href="{{ url('/skrining-penyakit') }}">Skrining Penyakit</a></li>
             <li><a href="{{ url('/prediksi-penyakit') }}">Prediksi Penyakit</a></li>
         </ul>
-    </div>
-
-    <div class="col-lg-4 col-md-12 footer-newsletter">
-        <h4>Berita Terbaru</h4>
-        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-        <form action="forms/newsletter.php" method="post" class="php-email-form">
-        <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-        <div class="loading">Loading</div>
-        <div class="error-message"></div>
-        <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-        </form>
     </div>
 
     </div>
