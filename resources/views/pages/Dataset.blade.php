@@ -21,6 +21,17 @@
                 <button type="reset" class="btn btn-primary">Hapus</button>
             </form>
         </div>
+        <div class="container">
+            <div class="text-start my-3">
+                <form action="{{ route('dataset.delete_all') }}" method="POST" class="form-delete-all">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">
+                        Hapus Semua Data
+                    </button>
+                </form>                
+            </div>   
+        </div>  
     </section>
     <section class="form-dataset">
         <div class="container mt-4">
@@ -43,6 +54,7 @@
                             <th scope="col">Polydipsia</th>
                             <th scope="col">Weakness</th>
                             <th scope="col">Keterangan</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,6 +73,19 @@
                                 <td>{{ $item->polydipsia }}</td>
                                 <td>{{ $item->weakness }}</td>
                                 <td>{{ $item->keterangan }}</td>
+                                <td class="text-center">
+                                    <a href="{{ route('dataset.edit', $item->id) }}" class="btn btn-sm btn-warning mb-2" title="Edit">
+                                        <i class="bi bi-pencil-square"></i> <!-- Icon edit -->
+                                    </a>
+                                
+                                    <form action="{{ route('dataset.delete', $item->id) }}" method="POST" class="d-inline form-delete">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-danger" title="Delete">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>                            
                             </tr>
                         @endforeach
                     </tbody>

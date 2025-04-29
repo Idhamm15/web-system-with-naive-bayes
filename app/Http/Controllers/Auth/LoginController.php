@@ -34,7 +34,6 @@ class LoginController extends Controller
         $input = $request->all();
         // dd($request->all());
         $this->validate($request,[
-            // 'email'=>'required|email',
             'username'=>'required|string',
             'password'=>'required'
         ]);
@@ -44,10 +43,6 @@ class LoginController extends Controller
             {
                 return redirect('/');
             }
-            // else if(auth()->user()->role == 'SUPER ADMIN')
-            // {
-            //     return redirect('/admin');
-            // }
             else
             {
                 return redirect('/');
@@ -55,9 +50,7 @@ class LoginController extends Controller
         }
         else
         {
-            return redirect()
-            ->route("login")
-            ->with("error",'Incorrect username or password');
+            return redirect()->back()->with('login_error', 'Username atau Password Anda salah!');
         }
     }
 }

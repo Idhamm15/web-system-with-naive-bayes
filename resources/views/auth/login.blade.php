@@ -60,9 +60,9 @@
 					<span class="checkmark"></span>
 					</label>
 				</div>
-				<div class="w-50 text-md-right">
+				{{-- <div class="w-50 text-md-right">
 					<a href="#">Lupa Password</a>
-				</div>
+				</div> --}}
 			</div>
 		</form>
 		<p class="text-center">Tidak Punya Akun? <a href="/register">Buat Akun</a></p>

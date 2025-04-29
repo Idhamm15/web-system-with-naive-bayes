@@ -7,6 +7,7 @@
   <title>@yield('title')</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -50,6 +51,96 @@
 
   {{-- JS --}}
   @include('component.includes.js')
+
+  <script>
+      @if(session('success'))
+      Swal.fire({
+          toast: true,
+          icon: 'success',
+          title: "{{ session('success') }}",
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          showClass: {
+              popup: ''
+          },
+          hideClass: {
+              popup: ''
+          }
+      });
+      @elseif(session('error'))
+      Swal.fire({
+          toast: true,
+          icon: 'error',
+          title: "{{ session('error') }}",
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          showClass: {
+              popup: ''
+          },
+          hideClass: {
+              popup: ''
+          }
+      });
+      @endif
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const deleteForms = document.querySelectorAll('.form-delete');
+
+        deleteForms.forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // cegah form langsung submit
+
+                Swal.fire({
+                    title: 'Yakin ingin menghapus data ini?',
+                    text: "Data yang dihapus tidak bisa dikembalikan!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: 'Ya, hapus!',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit(); // submit jika user klik "Ya"
+                    }
+                });
+            });
+        });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const deleteAllForm = document.querySelector('.form-delete-all');
+
+        if (deleteAllForm) {
+            deleteAllForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                Swal.fire({
+                    title: 'Yakin ingin menghapus SEMUA data?',
+                    text: "Semua data akan terhapus permanen!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: 'Ya, hapus semua!',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        deleteAllForm.submit();
+                    }
+                });
+            });
+        }
+    });
+  </script>
 
 </body>
 

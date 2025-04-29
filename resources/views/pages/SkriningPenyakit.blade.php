@@ -37,49 +37,49 @@
             <h2>Skrining Ispa, Diare, DM Type II</h2>
             <hr>
             <div class="mb-3">
-                <label class="form-label">Apakah Anda sedang mengalami batuk kering dan berdahak?</label>
+                <label class="form-label">Apakah Anda sedang mengalami batuk kering dan berdahak? (tussis)</label>
                 <div>
                     <input type="radio" name="tussis" value="A" required> Ya
                     <input type="radio" name="tussis" value="B" required> Tidak
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Apakah Anda mengalami kram pada perut?</label>
+                <label class="form-label">Apakah andamengalami peningkatan suhu tubuh (demam)? (febris)</label>
                 <div>
                     <input type="radio" name="febris" value="A" required> Ya
                     <input type="radio" name="febris" value="B" required> Tidak
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Apakah Anda mengalami bersin yang berlebihan dan hidung tersumbat?</label>
+                <label class="form-label">Apakah Anda mengalami bersin yang berlebihan dan hidung tersumbat? (selesma)</label>
                 <div>
                     <input type="radio" name="selesma" value="A" required> Ya
                     <input type="radio" name="selesma" value="B" required> Tidak
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Apakah Anda mengalami haus yang berlebihan?</label>
+                <label class="form-label">Apakah anda mengalami muntah dan mual? (gastroenteritis)</label>
                 <div>
                     <input type="radio" name="gastreonteritis" value="A" required> Ya
                     <input type="radio" name="gastreonteritis" value="B" required> Tidak
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Apakah Anda mengalami peningkatan suhu tubuh (Demam)?</label>
+                <label class="form-label">Apakah anda mengalami kram pada perut? (Colic Abdomen)</label>
                 <div>
                     <input type="radio" name="colic_abdomen" value="A" required> Ya
                     <input type="radio" name="colic_abdomen" value="B" required> Tidak
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Apakah Anda mengalami muntah dan mual?</label>
+                <label class="form-label">Apakah anda sering membuang air kecil yang berlebihan? (Polyuria)</label>
                 <div>
                     <input type="radio" name="polyuria" value="A" required> Ya
                     <input type="radio" name="polyuria" value="B" required> Tidak
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Apakah Anda sering membuang air kecil yang berlebihan?</label>
+                <label class="form-label">Apakah anda mengalami rasa haus yang berlebihan? (Polydipsia)</label>
                 <div>
                     <input type="radio" name="polydipsia" value="A" required> Ya
                     <input type="radio" name="polydipsia" value="B" required> Tidak

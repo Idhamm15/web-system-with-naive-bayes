@@ -8,6 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     {{-- Title --}}
     <title>@yield('title')</title>
@@ -43,6 +44,16 @@
     @stack('prepend-script')
     @include('layout.auth.styles.script')
     @stack('addon-script')
+
+    @if(session('login_error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Gagal',
+                text: "{{ session('login_error') }}",
+            });
+        </script>
+    @endif
 
   </body>
 </html>

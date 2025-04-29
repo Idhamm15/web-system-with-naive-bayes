@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DataTraining;
 use Illuminate\Http\Request;
 
 class DiseaseScreeningController extends Controller
@@ -13,8 +14,9 @@ class DiseaseScreeningController extends Controller
 
     public function screening (Request $request)
     {
+
         // dd($request->all());
-        // $dataTesting = $request->all();
+
         $dataTesting = $request->all();
         $name_patient = $request->fullname;
 
@@ -98,5 +100,26 @@ class DiseaseScreeningController extends Controller
         $predictedClass = array_keys($finalProbabilities, max($finalProbabilities))[0];
 
         return view('pages.HasilSkriningPenyakit', get_defined_vars());
+    }
+
+    public function save_screening(Request $request)
+    {
+        // Simpan data ke model DataTraining
+        $data = new DataTraining();
+        $data->fullname = $request->fullname;
+        $data->usia = $request->usia;
+        $data->jenis_kelamin = $request->jenis_kelamin;
+        $data->tussis = $request->tussis;
+        $data->febris = $request->febris;
+        $data->selesma = $request->selesma;
+        $data->gastreonteritis = $request->gastreonteritis;
+        $data->colic_abdomen = $request->colic_abdomen;
+        $data->polyuria = $request->polyuria;
+        $data->polydipsia = $request->polydipsia;
+        $data->weakness = $request->weakness;
+        $data->keterangan = $request->hasil_prediksi;
+        $data->save();
+    
+        return redirect()->back()->with('success', 'Data berhasil disimpan ke data training.');
     }
 }

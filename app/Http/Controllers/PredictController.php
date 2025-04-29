@@ -9,8 +9,9 @@ class PredictController extends Controller
 {
     public function classify(Request $request)
     {
+        // dd($request->all());
         // $dataTesting = $request->all();
-        $dataTesting = DataTraining::latest()->first();
+        $dataTesting = DataTraining::orderBy('id', 'desc')->first();
 
         // Probabilitas awal P(Ci)
         $classProbabilities = [

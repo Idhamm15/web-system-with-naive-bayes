@@ -20,10 +20,20 @@
                         @foreach ($dataTesting->toArray() as $attribute => $value)
                             <tr>
                                 <td>{{ ucfirst(str_replace('_', ' ', $attribute)) }}</td>
-                                <td>{{ $value }}</td>
+                                <td>
+                                    @if (in_array($attribute, ['created_at', 'updated_at']))
+                                        @if ($value)
+                                            {{ \Carbon\Carbon::parse($value)->translatedFormat('d F Y H:i') }}
+                                        @else
+                                            -
+                                        @endif
+                                    @else
+                                        {{ $value }}
+                                    @endif
+                                </td>
                             </tr>
                         @endforeach
-                    </tbody>
+                    </tbody>                    
                 </table>
             </div>
         
