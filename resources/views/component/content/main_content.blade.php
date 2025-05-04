@@ -4,7 +4,7 @@
 <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
     <div class="carousel-item active">
-    <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
+    <img src="assets/img/bg-hero.jpeg" alt="">
     <div class="container">
         <h2>Klasifikasi Naive Bayes</h2>
         <p>
@@ -17,7 +17,7 @@
     </div><!-- End Carousel Item -->
 
     <div class="carousel-item">
-    <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
+    <img src="assets/img/bg-hero.jpeg" alt="">
     <div class="container">
         <h2>Klasifikasi Naive Bayes</h2>
         <p>
@@ -30,7 +30,7 @@
     </div><!-- End Carousel Item -->
 
     <div class="carousel-item">
-    <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
+    <img src="assets/img/bg-hero.jpeg" alt="">
     <div class="container">
         <h2>Klasifikasi Naive Bayes</h2>
         <p>

@@ -13,7 +13,7 @@
         <li><a href="{{ url('/data-soal') }}">Data Soal</a></li>
         <li><a href="{{ url('/uji-akurasi') }}">Uji Akurasi</a></li> --}}
         <li><a href="{{ url('/skrining-penyakit') }}">Skrining Penyakit</a></li>
-        <li><a href="{{ url('/prediksi-penyakit') }}">Prediksi Penyakit</a></li>
+        <li><a href="{{ url('/prediksi-penyakit') }}">Hasil Cetak</a></li>
         {{-- <li><a href="{{ url('/logout') }}">Keluar</a></li> --}}
 
         @guest

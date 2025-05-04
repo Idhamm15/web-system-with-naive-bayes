@@ -14,7 +14,6 @@ class DiseaseScreeningController extends Controller
 
     public function screening (Request $request)
     {
-
         // dd($request->all());
 
         $dataTesting = $request->all();
@@ -48,8 +47,8 @@ class DiseaseScreeningController extends Controller
                 'B' => ['ISPA' => 0, 'DIARE' => 0, 'DM TYPE II' => 1],
             ],
             'selesma' => [
-                'A' => ['ISPA' => 1, 'DIARE' => 1, 'DM TYPE II' => 0],
-                'B' => ['ISPA' => 0, 'DIARE' => 0, 'DM TYPE II' => 1],
+                'A' => ['ISPA' => 1, 'DIARE' => 0, 'DM TYPE II' => 0],
+                'B' => ['ISPA' => 0, 'DIARE' => 1, 'DM TYPE II' => 1],
             ],
             'gastreonteritis' => [
                 'A' => ['ISPA' => 0, 'DIARE' => 1, 'DM TYPE II' => 0],
@@ -76,7 +75,7 @@ class DiseaseScreeningController extends Controller
         // Menghitung P(X|Ci)
         $classLikelihoods = [];
         foreach ($classProbabilities as $class => $probability) {
-            $classLikelihoods[$class] = 1; // Start with 1 (multiplication identity)
+            $classLikelihoods[$class] = 1;
 
             // Loop untuk menghitung likelihood
             foreach ($dataTesting as $attribute => $value) {

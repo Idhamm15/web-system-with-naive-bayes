@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Apakah andamengalami peningkatan suhu tubuh (demam)? (febris)</label>
+                <label class="form-label">Apakah anda mengalami peningkatan suhu tubuh (demam)? (febris)</label>
                 <div>
                     <input type="radio" name="febris" value="A" required> Ya
                     <input type="radio" name="febris" value="B" required> Tidak
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Apakah Anda sering merasa kelelahan (Lemas)?</label>
+                <label class="form-label">Apakah Anda sering merasa kelelahan (Weaknes)?</label>
                 <div>
                     <input type="radio" name="weakness" value="A" required> Ya
                     <input type="radio" name="weakness" value="B" required> Tidak
