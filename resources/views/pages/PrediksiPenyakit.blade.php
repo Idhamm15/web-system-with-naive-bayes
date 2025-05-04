@@ -145,17 +145,11 @@
                             <td>{{ $dataTesting->keterangan }}</td>
                         </tr>
 
-                    
-
-
-
-
-                    
                     </tbody>                    
                 </table>
             </div>
         
-            <h3>Probabilitas Akhir</h3>
+            {{-- <h3>Probabilitas Akhir</h3>
         
             <div class="table-responsive">
                 <table class="table table-bordered">
@@ -177,7 +171,7 @@
             </div>
         
             <h3>Kelas Prediksi</h3>
-            <p><strong>{{ $predictedClass }}</strong></p>
+            <p><strong>{{ $predictedClass }}</strong></p> --}}
 
             <div class="container mt-5">
                 <div class="ttd-block ms-auto">
