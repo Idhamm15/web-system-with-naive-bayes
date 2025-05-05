@@ -178,7 +178,8 @@
                     <p>Ka. UPT. Puskesmas Delitua</p>
                     <p>Kec. Delitua</p>
                     <p>Dibuat oleh</p>
-                    <img src="{{ asset('/assets/img/ttd-petugas.png') }}" alt="">
+                    <br><br>
+                    {{-- <img src="{{ asset('/assets/img/ttd-petugas.png') }}" alt=""> --}}
                     <p>Petugas medis</p>
                 </div>
             </div>
