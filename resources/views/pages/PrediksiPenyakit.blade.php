@@ -23,8 +23,9 @@
                         @php
                             $attributeLabels = [
                                 'created_at' => 'Tanggal Skrining',
-                                'updated_at' => 'Tanggal Pembaruan',
+                                // 'updated_at' => 'Tanggal Pembaruan',
                                 'fullname' => 'Nama Lengkap',
+                                'usia_int' => 'Usia Int',
                                 'usia' => 'Usia',
                                 'jenis_kelamin' => 'Jenis Kelamin',
                                 'gejala' => 'Gejala yang di alami',
@@ -58,20 +59,16 @@
                         <tr>
                             <td>{{ $attributeLabels['created_at'] }}</td>
                             <td> 
-                                @if (in_array($attribute, ['created_at', 'updated_at']))
-                                    @if ($value)
-                                        {{ \Carbon\Carbon::parse($value)->translatedFormat('d F Y H:i') }}
-                                    @else
-                                        -
-                                    @endif
+                                @if ($value)
+                                    {{ \Carbon\Carbon::parse($value)->setTimezone('Asia/Jakarta')->locale('id')->translatedFormat('d F Y') }} WIB
                                 @else
-                                    {{ $value }}
+                                    -
                                 @endif
                             </td>
                         </tr>
 
                         <!-- Tampilkan Updated At -->
-                        <tr>
+                        {{-- <tr>
                             <td>{{ $attributeLabels['updated_at'] }}</td>
                             <td>
                                 @if (in_array($attribute, ['created_at', 'updated_at']))
@@ -84,7 +81,7 @@
                                     {{ $value }}
                                 @endif
                             </td>
-                        </tr>
+                        </tr> --}}
 
                         <!-- Tampilkan Nama Lengkap (Fullname) -->
                         <tr>
@@ -96,6 +93,7 @@
                         <tr>
                             <td>{{ $attributeLabels['usia'] }}</td>
                             <td>
+                                {{ $dataTesting->usia_int }} -
                                 @if ($dataTesting->usia === 'A')
                                     Golongan A
                                 @elseif ($dataTesting->usia === 'B')

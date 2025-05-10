@@ -44,6 +44,7 @@
                             <th scope="col">No</th>
                             <th scope="col">Nama Lengkap</th>
                             <th scope="col">Usia</th>
+                            <th scope="col">Gol Usia</th>
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Tussis</th>
                             <th scope="col">Febris</th>
@@ -62,6 +63,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->fullname ?? '-' }}</td>
+                                <td>{{ $item->usia_int ?? '-' }}</td>
                                 <td>{{ $item->usia }}</td>
                                 <td>{{ $item->jenis_kelamin }}</td>
                                 <td>{{ $item->tussis }}</td>

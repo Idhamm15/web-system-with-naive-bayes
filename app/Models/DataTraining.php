@@ -13,6 +13,7 @@ class DataTraining extends Model
 
     protected $fillable = [
         'fullname',
+        'usia_int',
         'usia',
         'jenis_kelamin',
         'tussis',

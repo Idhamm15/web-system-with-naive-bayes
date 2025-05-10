@@ -18,6 +18,7 @@
                 <label for="usia" class="form-label">Usia</label>
                 <input type="number" class="form-control" id="usia" name="usia" required>
             </div>
+            <input type="hidden" name="usia_int" id="usia_int">
             <input type="hidden" id="usia_kategori" name="usia">
             <div class="mb-3">
                 <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
@@ -126,6 +127,7 @@
     document.getElementById('mainForm').addEventListener('submit', function (event) {
         let usiaInput = document.getElementById('usia');
         let usiaKategoriInput = document.getElementById('usia_kategori');
+        let usiaIntInput = document.getElementById('usia_int'); // input hidden usia asli
         let usia = parseInt(usiaInput.value);
         let kategori = '';
 
@@ -144,13 +146,15 @@
                 return;
             }
 
-            usiaKategoriInput.value = kategori; // Simpan kategori di input hidden
+            usiaKategoriInput.value = kategori;
+            usiaIntInput.value = usia; // Set nilai usia asli
         } else {
             alert('Masukkan usia yang valid!');
             event.preventDefault();
             return;
         }
     });
+
 </script>
 
 

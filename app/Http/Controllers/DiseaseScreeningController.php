@@ -106,6 +106,7 @@ class DiseaseScreeningController extends Controller
         // Simpan data ke model DataTraining
         $data = new DataTraining();
         $data->fullname = $request->fullname;
+        $data->usia_int = $request->usia_int;
         $data->usia = $request->usia;
         $data->jenis_kelamin = $request->jenis_kelamin;
         $data->tussis = $request->tussis;

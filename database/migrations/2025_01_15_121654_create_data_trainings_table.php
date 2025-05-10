@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('data_trainings', function (Blueprint $table) {
             $table->id();
             $table->string('fullname');
+            $table->integer('usia_int');
             $table->string('usia');
             $table->string('jenis_kelamin');
             $table->string('tussis');

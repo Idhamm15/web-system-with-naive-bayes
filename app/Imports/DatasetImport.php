@@ -16,6 +16,7 @@ class DatasetImport implements ToModel, WithHeadingRow
     {
         return new DataTraining([
             'fullname'        => $row['nama_lengkap'],
+            'usia_int'            => $row['usia_int'],
             'usia'            => $row['usia'],
             'jenis_kelamin'   => $row['jenis_kelamin'],
             'tussis'          => $row['tussis'],
