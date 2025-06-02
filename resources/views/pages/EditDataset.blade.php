@@ -20,6 +20,7 @@
                 <input type="number" class="form-control" id="usia" name="usia" required>
             </div>
             <input type="hidden" id="usia_kategori" name="usia">
+            <input type="hidden" id="usia_int" name="usia_int">
 
             <div class="mb-3">
                 <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
@@ -61,30 +62,35 @@
         document.getElementById('mainForm').addEventListener('submit', function (event) {
             let usiaInput = document.getElementById('usia');
             let usiaKategoriInput = document.getElementById('usia_kategori');
+            let usiaIntInput = document.getElementById('usia_int');
+
             let usia = parseInt(usiaInput.value);
             let kategori = '';
 
             if (!isNaN(usia)) {
                 if (usia <= 40) {
                     kategori = 'A';
-                } else if (usia >= 41 && usia <= 50) {
+                } else if (usia <= 50) {
                     kategori = 'B';
-                } else if (usia >= 51 && usia <= 60) {
+                } else if (usia <= 60) {
                     kategori = 'C';
-                } else if (usia >= 61 && usia <= 70) {
+                } else if (usia <= 70) {
                     kategori = 'D';
                 } else {
-                    alert('Usia tidak valid!');
-                    event.preventDefault(); // Hentikan pengiriman form
+                    alert('Usia tidak valid! masukkan angka 1-70');
+                    event.preventDefault();
                     return;
                 }
 
-                usiaKategoriInput.value = kategori; // Simpan kategori di input hidden
+                // Set hidden inputs
+                usiaKategoriInput.value = kategori;
+                usiaIntInput.value = usia;
             } else {
-                alert('Masukkan usia yang valid!');
+                alert('Masukkan usia yang valid! masukkan angka 1-70');
                 event.preventDefault();
                 return;
             }
         });
     </script>
+
 @endsection

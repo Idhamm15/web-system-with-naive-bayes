@@ -42,6 +42,7 @@ class DatasetController extends Controller
         $validator = Validator::make($request->all(), [
             'id' => 'required|exists:data_trainings,id',
             'fullname' => 'nullable',
+            'usia_int' => 'nullable',
             'usia' => 'nullable',
             'jenis_kelamin' => 'nullable',
             'tussis' => 'nullable',
@@ -61,6 +62,7 @@ class DatasetController extends Controller
         $data = DataTraining::findOrFail($request->id);
         $data->update($request->only([
             'fullname',
+            'usia_int',
             'usia',
             'jenis_kelamin',
             'tussis',
